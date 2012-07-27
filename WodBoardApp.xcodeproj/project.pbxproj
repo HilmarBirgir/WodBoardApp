@@ -21,6 +21,8 @@
 		0EDB914B15C2D5F5001C0BC4 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EDB914A15C2D5F5001C0BC4 /* second@2x.png */; };
 		0EDB914E15C2D5F5001C0BC4 /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EDB914C15C2D5F5001C0BC4 /* FirstViewController.xib */; };
 		0EDB915115C2D5F5001C0BC4 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EDB914F15C2D5F5001C0BC4 /* SecondViewController.xib */; };
+		0EDB915A15C2D62C001C0BC4 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EDB915815C2D62C001C0BC4 /* LoginViewController.m */; };
+		0EDB915B15C2D62C001C0BC4 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EDB915915C2D62C001C0BC4 /* LoginViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,22 +30,25 @@
 		0EDB912C15C2D5F4001C0BC4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0EDB912E15C2D5F4001C0BC4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0EDB913015C2D5F5001C0BC4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		0EDB913415C2D5F5001C0BC4 /* WodBoardApp-Info.plist */ = {isa = PBXFileReference; path = "WodBoardApp-Info.plist"; sourceTree = "<group>"; };
+		0EDB913415C2D5F5001C0BC4 /* WodBoardApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WodBoardApp-Info.plist"; sourceTree = "<group>"; };
 		0EDB913615C2D5F5001C0BC4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0EDB913815C2D5F5001C0BC4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		0EDB913A15C2D5F5001C0BC4 /* WodBoardApp-Prefix.pch */ = {isa = PBXFileReference; path = "WodBoardApp-Prefix.pch"; sourceTree = "<group>"; };
-		0EDB913B15C2D5F5001C0BC4 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		0EDB913A15C2D5F5001C0BC4 /* WodBoardApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WodBoardApp-Prefix.pch"; sourceTree = "<group>"; };
+		0EDB913B15C2D5F5001C0BC4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0EDB913C15C2D5F5001C0BC4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		0EDB913E15C2D5F5001C0BC4 /* FirstViewController.h */ = {isa = PBXFileReference; path = FirstViewController.h; sourceTree = "<group>"; };
+		0EDB913E15C2D5F5001C0BC4 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		0EDB913F15C2D5F5001C0BC4 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		0EDB914115C2D5F5001C0BC4 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		0EDB914315C2D5F5001C0BC4 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		0EDB914515C2D5F5001C0BC4 /* SecondViewController.h */ = {isa = PBXFileReference; path = SecondViewController.h; sourceTree = "<group>"; };
+		0EDB914515C2D5F5001C0BC4 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		0EDB914615C2D5F5001C0BC4 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		0EDB914815C2D5F5001C0BC4 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		0EDB914A15C2D5F5001C0BC4 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		0EDB914D15C2D5F5001C0BC4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FirstViewController.xib; sourceTree = "<group>"; };
 		0EDB915015C2D5F5001C0BC4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondViewController.xib; sourceTree = "<group>"; };
+		0EDB915715C2D62C001C0BC4 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = ../LoginViewController.h; sourceTree = "<group>"; };
+		0EDB915815C2D62C001C0BC4 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = ../LoginViewController.m; sourceTree = "<group>"; };
+		0EDB915915C2D62C001C0BC4 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginViewController.xib; path = ../LoginViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,10 +103,13 @@
 				0EDB914315C2D5F5001C0BC4 /* first@2x.png */,
 				0EDB914515C2D5F5001C0BC4 /* SecondViewController.h */,
 				0EDB914615C2D5F5001C0BC4 /* SecondViewController.m */,
+				0EDB915715C2D62C001C0BC4 /* LoginViewController.h */,
+				0EDB915815C2D62C001C0BC4 /* LoginViewController.m */,
 				0EDB914815C2D5F5001C0BC4 /* second.png */,
 				0EDB914A15C2D5F5001C0BC4 /* second@2x.png */,
 				0EDB914C15C2D5F5001C0BC4 /* FirstViewController.xib */,
 				0EDB914F15C2D5F5001C0BC4 /* SecondViewController.xib */,
+				0EDB915915C2D62C001C0BC4 /* LoginViewController.xib */,
 				0EDB913315C2D5F5001C0BC4 /* Supporting Files */,
 			);
 			path = WodBoardApp;
@@ -176,6 +184,7 @@
 				0EDB914B15C2D5F5001C0BC4 /* second@2x.png in Resources */,
 				0EDB914E15C2D5F5001C0BC4 /* FirstViewController.xib in Resources */,
 				0EDB915115C2D5F5001C0BC4 /* SecondViewController.xib in Resources */,
+				0EDB915B15C2D62C001C0BC4 /* LoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,6 +199,7 @@
 				0EDB913D15C2D5F5001C0BC4 /* AppDelegate.m in Sources */,
 				0EDB914015C2D5F5001C0BC4 /* FirstViewController.m in Sources */,
 				0EDB914715C2D5F5001C0BC4 /* SecondViewController.m in Sources */,
+				0EDB915A15C2D62C001C0BC4 /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
