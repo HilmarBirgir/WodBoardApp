@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E57358D15C2E20400A58F7B /* src in Resources */ = {isa = PBXBuildFile; fileRef = 0E57358C15C2E20400A58F7B /* src */; };
+		0E57359315C2E20B00A58F7B /* libfacebook_ios_sdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E57359215C2E20B00A58F7B /* libfacebook_ios_sdk.a */; };
 		0EDB912D15C2D5F4001C0BC4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EDB912C15C2D5F4001C0BC4 /* UIKit.framework */; };
 		0EDB912F15C2D5F5001C0BC4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EDB912E15C2D5F4001C0BC4 /* Foundation.framework */; };
 		0EDB913115C2D5F5001C0BC4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EDB913015C2D5F5001C0BC4 /* CoreGraphics.framework */; };
@@ -26,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E57358C15C2E20400A58F7B /* src */ = {isa = PBXFileReference; lastKnownFileType = folder; path = src; sourceTree = "<group>"; };
+		0E57359215C2E20B00A58F7B /* libfacebook_ios_sdk.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = libfacebook_ios_sdk.a; path = "WodBoardApp/src/build/Release-iphoneos/libfacebook_ios_sdk.a"; sourceTree = "<group>"; };
 		0EDB912815C2D5F4001C0BC4 /* WodBoardApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WodBoardApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EDB912C15C2D5F4001C0BC4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0EDB912E15C2D5F4001C0BC4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -56,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E57359315C2E20B00A58F7B /* libfacebook_ios_sdk.a in Frameworks */,
 				0EDB912D15C2D5F4001C0BC4 /* UIKit.framework in Frameworks */,
 				0EDB912F15C2D5F5001C0BC4 /* Foundation.framework in Frameworks */,
 				0EDB913115C2D5F5001C0BC4 /* CoreGraphics.framework in Frameworks */,
@@ -68,6 +73,7 @@
 		0EDB911D15C2D5F4001C0BC4 = {
 			isa = PBXGroup;
 			children = (
+				0E57359215C2E20B00A58F7B /* libfacebook_ios_sdk.a */,
 				0EDB913215C2D5F5001C0BC4 /* WodBoardApp */,
 				0EDB912B15C2D5F4001C0BC4 /* Frameworks */,
 				0EDB912915C2D5F4001C0BC4 /* Products */,
@@ -110,6 +116,7 @@
 				0EDB914C15C2D5F5001C0BC4 /* FirstViewController.xib */,
 				0EDB914F15C2D5F5001C0BC4 /* SecondViewController.xib */,
 				0EDB915915C2D62C001C0BC4 /* LoginViewController.xib */,
+				0E57358C15C2E20400A58F7B /* src */,
 				0EDB913315C2D5F5001C0BC4 /* Supporting Files */,
 			);
 			path = WodBoardApp;
@@ -185,6 +192,7 @@
 				0EDB914E15C2D5F5001C0BC4 /* FirstViewController.xib in Resources */,
 				0EDB915115C2D5F5001C0BC4 /* SecondViewController.xib in Resources */,
 				0EDB915B15C2D62C001C0BC4 /* LoginViewController.xib in Resources */,
+				0E57358D15C2E20400A58F7B /* src in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,6 +325,7 @@
 				0EDB915615C2D5F5001C0BC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
