@@ -50,9 +50,6 @@
         facebook.accessToken = [defaults objectForKey:@"FBAccessTokenKey"];
         facebook.expirationDate = [defaults objectForKey:@"FBExpirationDateKey"];
     }
-    if (![facebook isSessionValid]) {
-        [facebook authorize:nil];
-    }
     [self.window makeKeyAndVisible];
     [self.tabBarController presentModalViewController:loginViewController animated:NO];
     return YES;
@@ -92,6 +89,21 @@
     [defaults synchronize];
     
 }
+- (void)fbDidNotLogin:(BOOL)cancelled{}
+- (void)fbDidExtendToken:(NSString*)accessToken
+               expiresAt:(NSDate*)expiresAt{}
+- (void)fbDidLogout{
+    // Remove saved authorization information if it exists
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if ([defaults objectForKey:@"FBAccessTokenKey"]) {
+        [defaults removeObjectForKey:@"FBAccessTokenKey"];
+        [defaults removeObjectForKey:@"FBExpirationDateKey"];
+        [defaults synchronize];
+    }
+}
+- (void)fbSessionInvalidated{}
+
+
 
 /*
 // Optional UITabBarControllerDelegate method.

@@ -7,13 +7,14 @@
 //
 
 #import "LoginViewController.h"
+#import "AppDelegate.h"
 
 @interface LoginViewController ()
 
 @end
 
 @implementation LoginViewController
-@synthesize button;
+@synthesize button, fbbutton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,6 +28,18 @@
 -(IBAction)login:(id) sender{
     [self dismissModalViewControllerAnimated:YES];
 }
+-(IBAction)fblogin:(id) sender{
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    Facebook *facebook = [appDelegate facebook];
+    if (![facebook isSessionValid]) {
+        [facebook authorize:nil];
+    }else{
+        [self dismissModalViewControllerAnimated:YES];
+    }
+    [self dismissModalViewControllerAnimated:YES];
+}
+
+
 
 - (void)viewDidLoad
 {

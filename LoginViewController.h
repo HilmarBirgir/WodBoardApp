@@ -7,13 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WodBoardApp/src/FBConnect.h"
+
 
 @interface LoginViewController : UIViewController{
     UIButton *button;
+    UIButton *fbbutton;
+    
 }
 
 @property(nonatomic, retain) IBOutlet UIButton *button;
+@property(nonatomic, retain) IBOutlet UIButton *fbbutton;
+
 
 -(IBAction)login:(id) sender;
+-(IBAction)fblogin:(id) sender;
+
 
 @end
