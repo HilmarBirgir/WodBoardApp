@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		0E57358D15C2E20400A58F7B /* src in Resources */ = {isa = PBXBuildFile; fileRef = 0E57358C15C2E20400A58F7B /* src */; };
 		0E57359315C2E20B00A58F7B /* libfacebook_ios_sdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E57359215C2E20B00A58F7B /* libfacebook_ios_sdk.a */; };
+		0E5735A615C4355B00A58F7B /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5735A415C4355A00A58F7B /* ThirdViewController.m */; };
+		0E5735A715C4355B00A58F7B /* ThirdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E5735A515C4355B00A58F7B /* ThirdViewController.xib */; };
+		0E5735AC15C43B3900A58F7B /* FourthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5735AA15C43B3900A58F7B /* FourthViewController.m */; };
+		0E5735AD15C43B3900A58F7B /* FourthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E5735AB15C43B3900A58F7B /* FourthViewController.xib */; };
+		0E5735B115C43F4900A58F7B /* FifthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5735AF15C43F4900A58F7B /* FifthViewController.m */; };
+		0E5735B215C43F4900A58F7B /* FifthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E5735B015C43F4900A58F7B /* FifthViewController.xib */; };
 		0EDB912D15C2D5F4001C0BC4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EDB912C15C2D5F4001C0BC4 /* UIKit.framework */; };
 		0EDB912F15C2D5F5001C0BC4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EDB912E15C2D5F4001C0BC4 /* Foundation.framework */; };
 		0EDB913115C2D5F5001C0BC4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EDB913015C2D5F5001C0BC4 /* CoreGraphics.framework */; };
@@ -29,7 +35,16 @@
 
 /* Begin PBXFileReference section */
 		0E57358C15C2E20400A58F7B /* src */ = {isa = PBXFileReference; lastKnownFileType = folder; path = src; sourceTree = "<group>"; };
-		0E57359215C2E20B00A58F7B /* libfacebook_ios_sdk.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = libfacebook_ios_sdk.a; path = "WodBoardApp/src/build/Release-iphoneos/libfacebook_ios_sdk.a"; sourceTree = "<group>"; };
+		0E57359215C2E20B00A58F7B /* libfacebook_ios_sdk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfacebook_ios_sdk.a; path = "WodBoardApp/src/build/Release-iphoneos/libfacebook_ios_sdk.a"; sourceTree = "<group>"; };
+		0E5735A315C4355A00A58F7B /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
+		0E5735A415C4355A00A58F7B /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
+		0E5735A515C4355B00A58F7B /* ThirdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThirdViewController.xib; sourceTree = "<group>"; };
+		0E5735A915C43B3900A58F7B /* FourthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourthViewController.h; sourceTree = "<group>"; };
+		0E5735AA15C43B3900A58F7B /* FourthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourthViewController.m; sourceTree = "<group>"; };
+		0E5735AB15C43B3900A58F7B /* FourthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FourthViewController.xib; sourceTree = "<group>"; };
+		0E5735AE15C43F4900A58F7B /* FifthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FifthViewController.h; sourceTree = "<group>"; };
+		0E5735AF15C43F4900A58F7B /* FifthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FifthViewController.m; sourceTree = "<group>"; };
+		0E5735B015C43F4900A58F7B /* FifthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FifthViewController.xib; sourceTree = "<group>"; };
 		0EDB912815C2D5F4001C0BC4 /* WodBoardApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WodBoardApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EDB912C15C2D5F4001C0BC4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0EDB912E15C2D5F4001C0BC4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -109,12 +124,21 @@
 				0EDB914315C2D5F5001C0BC4 /* first@2x.png */,
 				0EDB914515C2D5F5001C0BC4 /* SecondViewController.h */,
 				0EDB914615C2D5F5001C0BC4 /* SecondViewController.m */,
+				0E5735A315C4355A00A58F7B /* ThirdViewController.h */,
+				0E5735A415C4355A00A58F7B /* ThirdViewController.m */,
+				0E5735A915C43B3900A58F7B /* FourthViewController.h */,
+				0E5735AA15C43B3900A58F7B /* FourthViewController.m */,
+				0E5735AE15C43F4900A58F7B /* FifthViewController.h */,
+				0E5735AF15C43F4900A58F7B /* FifthViewController.m */,
 				0EDB915715C2D62C001C0BC4 /* LoginViewController.h */,
 				0EDB915815C2D62C001C0BC4 /* LoginViewController.m */,
 				0EDB914815C2D5F5001C0BC4 /* second.png */,
 				0EDB914A15C2D5F5001C0BC4 /* second@2x.png */,
 				0EDB914C15C2D5F5001C0BC4 /* FirstViewController.xib */,
 				0EDB914F15C2D5F5001C0BC4 /* SecondViewController.xib */,
+				0E5735A515C4355B00A58F7B /* ThirdViewController.xib */,
+				0E5735AB15C43B3900A58F7B /* FourthViewController.xib */,
+				0E5735B015C43F4900A58F7B /* FifthViewController.xib */,
 				0EDB915915C2D62C001C0BC4 /* LoginViewController.xib */,
 				0E57358C15C2E20400A58F7B /* src */,
 				0EDB913315C2D5F5001C0BC4 /* Supporting Files */,
@@ -193,6 +217,9 @@
 				0EDB915115C2D5F5001C0BC4 /* SecondViewController.xib in Resources */,
 				0EDB915B15C2D62C001C0BC4 /* LoginViewController.xib in Resources */,
 				0E57358D15C2E20400A58F7B /* src in Resources */,
+				0E5735A715C4355B00A58F7B /* ThirdViewController.xib in Resources */,
+				0E5735AD15C43B3900A58F7B /* FourthViewController.xib in Resources */,
+				0E5735B215C43F4900A58F7B /* FifthViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,6 +235,9 @@
 				0EDB914015C2D5F5001C0BC4 /* FirstViewController.m in Sources */,
 				0EDB914715C2D5F5001C0BC4 /* SecondViewController.m in Sources */,
 				0EDB915A15C2D62C001C0BC4 /* LoginViewController.m in Sources */,
+				0E5735A615C4355B00A58F7B /* ThirdViewController.m in Sources */,
+				0E5735AC15C43B3900A58F7B /* FourthViewController.m in Sources */,
+				0E5735B115C43F4900A58F7B /* FifthViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

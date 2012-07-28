@@ -1,29 +1,29 @@
 //
-//  FirstViewController.m
+//  SecondViewController.m
 //  WodBoardApp
 //
 //  Created by Hilmar Ólafsson on 7/27/12.
 //  Copyright (c) 2012 J&L. All rights reserved.
 //
 
-#import "FirstViewController.h"
+#import "FifthViewController.h"
 
-@interface FirstViewController ()
+@interface FifthViewController ()
 
 @end
 
-@implementation FirstViewController
+@implementation FifthViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = NSLocalizedString(@"Home", @"Home");
-        self.tabBarItem.image = [UIImage imageNamed:@"first"];
+        self.title = NSLocalizedString(@"Settings", @"Settings");
+        self.tabBarItem.image = [UIImage imageNamed:@"second"];
     }
     return self;
 }
-							
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];

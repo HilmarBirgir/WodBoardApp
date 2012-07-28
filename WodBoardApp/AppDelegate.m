@@ -10,6 +10,9 @@
 
 #import "FirstViewController.h"
 #import "SecondViewController.h"
+#import "ThirdViewController.h"
+#import "FourthViewController.h"
+#import "FifthViewController.h"
 #import "LoginViewController.h"
 
 @implementation AppDelegate
@@ -39,9 +42,12 @@
     // Override point for customization after application launch.
     UIViewController *viewController1 = [[[FirstViewController alloc] initWithNibName:@"FirstViewController" bundle:nil] autorelease];
     UIViewController *viewController2 = [[[SecondViewController alloc] initWithNibName:@"SecondViewController" bundle:nil] autorelease];
+    UIViewController *viewController3 = [[[ThirdViewController alloc] initWithNibName:@"ThirdViewController" bundle:nil] autorelease];
+    UIViewController *viewController4 = [[[FourthViewController alloc] initWithNibName:@"FourthViewController" bundle:nil] autorelease];
+    UIViewController *viewController5 = [[[FifthViewController alloc] initWithNibName:@"FifthViewController" bundle:nil] autorelease];
     UIViewController *loginViewController = [[[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil] autorelease];
     self.tabBarController = [[[UITabBarController alloc] init] autorelease];
-    self.tabBarController.viewControllers = [NSArray arrayWithObjects:viewController1, viewController2, nil];
+    self.tabBarController.viewControllers = [NSArray arrayWithObjects:viewController1, viewController2, viewController3, viewController4, viewController5, nil];
     self.window.rootViewController = self.tabBarController;
     facebook = [[Facebook alloc] initWithAppId:@"402563593135427" andDelegate:self];
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
