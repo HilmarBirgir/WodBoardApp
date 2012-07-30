@@ -8,6 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FifthViewController : UIViewController
+@class AppDelegate;
+
+@interface FifthViewController : UIViewController<UITextFieldDelegate>{
+    UILabel *nameLabel;
+    NSString *labelText;
+    NSString *userID;
+    UIImageView *profile;
+}
+
+@property(nonatomic, retain) IBOutlet UILabel *nameLabel;
+@property(nonatomic, copy) NSString *labelText;
+@property(nonatomic, copy) NSString *userID;
+@property(nonatomic, retain)IBOutlet UIImageView *profile;
+
 
 @end

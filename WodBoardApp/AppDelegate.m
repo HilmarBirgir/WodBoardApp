@@ -19,7 +19,7 @@
 
 @synthesize window = _window;
 @synthesize tabBarController = _tabBarController;
-@synthesize facebook;
+@synthesize facebook, username, userID, viewController1, viewController2, viewController3, viewController4 ,viewController5, loginViewController;
 
 - (void)dealloc
 {
@@ -38,17 +38,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
-    // Override point for customization after application launch.
-    UIViewController *viewController1 = [[[FirstViewController alloc] initWithNibName:@"FirstViewController" bundle:nil] autorelease];
-    UIViewController *viewController2 = [[[SecondViewController alloc] initWithNibName:@"SecondViewController" bundle:nil] autorelease];
-    UIViewController *viewController3 = [[[ThirdViewController alloc] initWithNibName:@"ThirdViewController" bundle:nil] autorelease];
-    UIViewController *viewController4 = [[[FourthViewController alloc] initWithNibName:@"FourthViewController" bundle:nil] autorelease];
-    UIViewController *viewController5 = [[[FifthViewController alloc] initWithNibName:@"FifthViewController" bundle:nil] autorelease];
-    UIViewController *loginViewController = [[[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil] autorelease];
-    self.tabBarController = [[[UITabBarController alloc] init] autorelease];
-    self.tabBarController.viewControllers = [NSArray arrayWithObjects:viewController1, viewController2, viewController3, viewController4, viewController5, nil];
-    self.window.rootViewController = self.tabBarController;
     facebook = [[Facebook alloc] initWithAppId:@"402563593135427" andDelegate:self];
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     if ([defaults objectForKey:@"FBAccessTokenKey"] 
@@ -56,6 +45,19 @@
         facebook.accessToken = [defaults objectForKey:@"FBAccessTokenKey"];
         facebook.expirationDate = [defaults objectForKey:@"FBExpirationDateKey"];
     }
+
+    [facebook requestWithGraphPath: @"me" andDelegate: self]; 
+    self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
+    // Override point for customization after application launch.
+    viewController1 = [[[FirstViewController alloc] initWithNibName:@"FirstViewController" bundle:nil] autorelease];
+    viewController2 = [[[SecondViewController alloc] initWithNibName:@"SecondViewController" bundle:nil] autorelease];
+    viewController3 = [[[ThirdViewController alloc] initWithNibName:@"ThirdViewController" bundle:nil] autorelease];
+    viewController4 = [[[FourthViewController alloc] initWithNibName:@"FourthViewController" bundle:nil] autorelease];
+    viewController5 = [[[FifthViewController alloc] initWithNibName:@"FifthViewController" bundle:nil] autorelease];
+    loginViewController = [[[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil] autorelease];
+    self.tabBarController = [[[UITabBarController alloc] init] autorelease];
+    self.tabBarController.viewControllers = [NSArray arrayWithObjects:viewController1, viewController2, viewController3, viewController4, viewController5, nil];
+    self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
     [self.tabBarController presentModalViewController:loginViewController animated:NO];
     return YES;
@@ -93,8 +95,19 @@
     [defaults setObject:[facebook accessToken] forKey:@"FBAccessTokenKey"];
     [defaults setObject:[facebook expirationDate] forKey:@"FBExpirationDateKey"];
     [defaults synchronize];
-    
 }
+
+- (void)request:(FBRequest *)request didLoad:(id)result {
+    NSDictionary *userInfo = (NSDictionary *)result;
+    NSLog(@"%@",userInfo);
+    username = [userInfo objectForKey:@"name"];
+    userID = [userInfo objectForKey:@"id"];
+    viewController5.labelText = username;
+    viewController5.userID = userID;
+
+}
+
+  
 - (void)fbDidNotLogin:(BOOL)cancelled{}
 - (void)fbDidExtendToken:(NSString*)accessToken
                expiresAt:(NSDate*)expiresAt{}
@@ -107,8 +120,8 @@
         [defaults synchronize];
     }
 }
-- (void)fbSessionInvalidated{}
 
+- (void)fbSessionInvalidated{}
 
 
 /*

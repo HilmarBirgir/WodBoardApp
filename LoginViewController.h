@@ -7,8 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "WodBoardApp/src/FBConnect.h"
-
 
 @interface LoginViewController : UIViewController{
     UIButton *button;

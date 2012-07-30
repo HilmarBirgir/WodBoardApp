@@ -18,7 +18,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = NSLocalizedString(@"Leaderboards", @"Leaderboards");
+        self.title = NSLocalizedString(@"Leaders", @"Leaders");
         self.tabBarItem.image = [UIImage imageNamed:@"second"];
     }
     return self;

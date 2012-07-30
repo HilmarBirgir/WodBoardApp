@@ -14,6 +14,8 @@
 
 @implementation FifthViewController
 
+@synthesize nameLabel, labelText, profile, userID;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -21,14 +23,22 @@
         self.title = NSLocalizedString(@"Settings", @"Settings");
         self.tabBarItem.image = [UIImage imageNamed:@"second"];
     }
+    
     return self;
 }
 
 - (void)viewDidLoad
 {
+    NSString *string = [NSString stringWithFormat:@"%@/%@/%@", @"https://graph.facebook.com", userID, @"picture"];
+    NSLog(@"%@",string);
+    NSURL *url = [NSURL URLWithString:string];
+    NSData *data = [NSData dataWithContentsOfURL:url];
+    UIImage *image = [UIImage imageWithData:data];
+    profile.image = image;
+    nameLabel.text = self.labelText;
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
 }
+
 
 - (void)viewDidUnload
 {
