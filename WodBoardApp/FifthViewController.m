@@ -30,7 +30,6 @@
 - (void)viewDidLoad
 {
     NSString *string = [NSString stringWithFormat:@"%@/%@/%@", @"https://graph.facebook.com", userID, @"picture"];
-    NSLog(@"%@",string);
     NSURL *url = [NSURL URLWithString:string];
     NSData *data = [NSData dataWithContentsOfURL:url];
     UIImage *image = [UIImage imageWithData:data];

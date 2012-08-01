@@ -45,7 +45,6 @@
         facebook.accessToken = [defaults objectForKey:@"FBAccessTokenKey"];
         facebook.expirationDate = [defaults objectForKey:@"FBExpirationDateKey"];
     }
-
     [facebook requestWithGraphPath: @"me" andDelegate: self]; 
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
@@ -95,16 +94,15 @@
     [defaults setObject:[facebook accessToken] forKey:@"FBAccessTokenKey"];
     [defaults setObject:[facebook expirationDate] forKey:@"FBExpirationDateKey"];
     [defaults synchronize];
+    [facebook requestWithGraphPath: @"me" andDelegate: self]; 
 }
 
 - (void)request:(FBRequest *)request didLoad:(id)result {
     NSDictionary *userInfo = (NSDictionary *)result;
-    NSLog(@"%@",userInfo);
     username = [userInfo objectForKey:@"name"];
     userID = [userInfo objectForKey:@"id"];
     viewController5.labelText = username;
     viewController5.userID = userID;
-
 }
 
   
